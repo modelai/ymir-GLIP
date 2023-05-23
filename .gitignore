@@ -37,4 +37,5 @@ dist/
 # MacOS
 .DS_Store
 
-
+*.sh
+*.py
