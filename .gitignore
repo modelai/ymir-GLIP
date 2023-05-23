@@ -38,4 +38,5 @@ dist/
 .DS_Store
 
 *.sh
-*.py
+test.py
+
