@@ -1,2 +1,0 @@
-docker run -it --gpus all --ipc host --shm-size='256G' -v /data1:/data1/ -v /data1/yenanfei/git/GLIP-ymir/DATASET/ymir_dataset/in/:/in -v /data1/yenanfei/git/GLIP-ymir/DATASET/ymir_dataset/out/:/out nanfei666/ymir-executor:ymir2.1.0-glip bash
-# pengchuanzhang/pytorch:ubuntu20.04_torch1.9-cuda11.3-nccl2.9.9 bash 
