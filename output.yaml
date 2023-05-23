@@ -1,0 +1,27 @@
+DATALOADER:
+  ASPECT_RATIO_GROUPING: false
+  SIZE_DIVISIBILITY: 32
+DATASETS:
+  GENERAL_COPY: 16
+  OVERRIDE_CATEGORY: '[{''supercategory'': ''none'', ''id'': 1, ''name'': ''hat''},
+    {''supercategory'': ''none'', ''id'': 2, ''name'': ''person''}]'
+  REGISTER:
+    test: {}
+    train: {}
+    val: {}
+  TEST: ('val',)
+  TRAIN: ('train',)
+INPUT:
+  MAX_SIZE_TEST: 640
+  MAX_SIZE_TRAIN: 640
+  MIN_SIZE_TEST: 640
+  MIN_SIZE_TRAIN: 640
+MODEL:
+  ATSS:
+    NUM_CLASSES: 3
+  DYHEAD:
+    NUM_CLASSES: 3
+  FCOS:
+    NUM_CLASSES: 3
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 3

@@ -1,0 +1,50 @@
+DATALOADER:
+  ASPECT_RATIO_GROUPING: false
+  SIZE_DIVISIBILITY: 32
+DATASETS:
+  GENERAL_COPY: 16
+  OVERRIDE_CATEGORY: '[
+        {
+            "supercategory": "none",
+            "id": 1,
+            "name": "hat"
+        },
+        {
+            "supercategory": "none",
+            "id": 2,
+            "name": "person"
+        }
+    ]'
+  # PREDEFINED_TEXT: odinw/pothole/category_description.json
+  REGISTER:
+    test:
+      ann_file: DATASET/VOC2028/val.json
+      img_dir: DATASET/VOC2028/val
+    train:
+      ann_file: DATASET/VOC2028/train.json
+      img_dir: DATASET/VOC2028/train
+    val:
+      ann_file: DATASET/VOC2028/val.json
+      img_dir: DATASET/VOC2028/val
+  TEST: ("val",)
+  TRAIN: ("train",)
+INPUT:
+  MAX_SIZE_TEST: 1333
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 800
+  MIN_SIZE_TRAIN: 800
+MODEL:
+  ATSS:
+    NUM_CLASSES: 3
+  DYHEAD:
+    NUM_CLASSES: 3
+  FCOS:
+    NUM_CLASSES: 3
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 3
+SOLVER:
+  CHECKPOINT_PERIOD: 100
+  MAX_EPOCH: 100
+  WARMUP_ITERS: 0
+TEST:
+  IMS_PER_BATCH: 4
