@@ -10,6 +10,7 @@ RUN wget https://penzhanwu2bbs.blob.core.windows.net/data/GLIPv1_Open/models/gli
      -O /app/MODEL/glip_a_tiny_o365.pth
 RUN pip install einops shapely timm yacs tensorboardX ftfy prettytable pymongo transformers loralib==0.1.1
 COPY . /app
+ENV CUDA_HOME="/usr/local/cuda"
 RUN cd /app && python setup.py build develop --user && cd /
 
 # setup ymir & ymir-GLIP
